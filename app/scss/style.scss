@@ -152,6 +152,9 @@
   }
   ul {
     list-style: none;
+    @include response(mobile) {
+      font-size: 14px;
+    }
   }
   ul li:before {
     display: inline-block;
