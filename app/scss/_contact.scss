@@ -51,6 +51,10 @@
         color: #fff;
         border-radius: 5px;
         float: right;
+        @include response(mobile) {
+          padding: 9px 44px;
+          font-size: 14px;
+        }
       }
       select {
         font-size: 16px;
