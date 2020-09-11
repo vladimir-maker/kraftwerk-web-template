@@ -1,0 +1,144 @@
+<html>
+  <head>
+    <title>Kraftwerk</title>
+    <link rel="icon" href="./dist/img/radio-checked.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css?cb=1599775270142" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Advent+Pro:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="kraftwerk-top">
+      <div class="header">
+          <div class="logo">
+            <a href="contact.html">
+            <img src="dist/img/logo-white.png" alt="Logo kraftwerk" />
+            </a>
+          </div>
+      </div>
+      <div class="main-image">
+        <div class="slider-container">
+            <div class="slider">
+              <div class="slider__item">
+                <img src="dist/img/slide_img_01.png" alt="Slide 1 kraftwerk">
+              </div>
+              <div class="slider__item">
+                <img src="dist/img/slide_img_02.png" alt="Slide 2 kraftwerk">
+              </div>
+              <div class="slider__item">
+                <img src="dist/img/slide_img_03.png" alt="Slide 3 kraftwerk">
+               </div>
+            </div>
+              <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
+                <span></span>
+              </div>
+              <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+                <span></span>
+              </div>
+          </div>
+        <div class="main-text">
+            <h1>
+                Get The Boot A Birds Eye Look </br>
+                Into Mcse Boot Camps
+            </h1>
+        </div>
+        <div class="main-button">
+            <button>Discover</button>
+        </div>
+      </div>
+    </div>
+    <div id="kraftwerk-middle">
+       <div class="kraftwerk-card">
+           <div class="card-header">
+               <h2>Face And Trouth</h2>
+           </div>
+           <div class="card-image">
+               <img src="dist/img/content_img_02.png" alt="Company kraftwerk"/>
+           </div>
+           <div class="card-text">
+               <p>
+               <b> When asked, "If you could wish for one thing only, what would that wish be?"</b>
+                almost everyone; from beauty pagent contenstans, to politicans, to religious 
+                leaders, to children, to the <span>average person</span> on the streets, 
+                "Peace On Earth" or "An end to all wars". Those wishes, while exemplary, 
+                are meaningless. As long as human exist there will never be peace on earth.
+                Throught the history of humankind there has never been peace on earth.
+                Cavemen fought other cavemen over territory, food and even women. Can killed
+                Abel God's respect.
+               </p>
+           </div>
+       </div>
+       <div class="kraftwerk-card">
+        <div class="card-header">
+            <h2>When The Morning Dawns</h2>
+        </div>
+        <div class="card-text">
+            <p>
+            The French Revolution constituted for the coscience of the dominant
+            aristocratic class a fall from innocence, and upturning of the natural
+            chain of events that resounded all over Europe; the old regime became,
+            in their imaginary, a paradise lost.
+            </p>
+        </br></br>
+            <ul>
+                <li>The Emerald Buddha</li>
+            </br>
+                <li>Fact And Truth</li>
+            </br>
+                <li>Comment On The Importance Human Life</li>
+            </br>
+                <li>Fact And Truth</li>
+            </ul>
+        </br></br>
+            <p>
+                This explains why some romantic poets born in the higher classes where
+                keen on seeing themselves as faded aristocrats, expelled from their
+                confortable milieu by a reverse of fortune or a design of destiny.
+                <b>Byron and Shelley are the prime instances of this vital pose</b>.
+                In the Giaour he writes on a vampiric character: "The common crowd but seeingthe gloom/
+                 Of wayward deeds and fitting doom;/ The close observer canespy/A 
+                 noble soul, and a lineage high."
+                </p>
+        </div>
+    </div>
+    </div>
+    <div class="big-card">
+        <div class="big-card-item">
+            <img src="dist/img/content_img_01.png" alt="Office kraftwerk"/>
+        </div>
+        <div class="big-card-item text-small">
+            <p>
+                When asked, "If you could wish for one thing only, what would that wish be?"
+                almost everyone; from beauty pagent contenstans, to politicans, to religious 
+                leaders, to children, to the <span>average person</span> on the streets, 
+                "Peace On Earth" or "An end to all wars". Those wishes, while exemplary, 
+                are meaningless. As long as human exist there will never be peace on earth.
+                Throught the history of humankind there has never been peace on earth.
+                Cavemen fought other cavemen over territory, food and even women. Can killed
+                Abel God's respect.
+               </p>
+        </div>
+    </div> 
+    <div id="kraftwerk-bottom">
+        <footer>
+            <div class="footer-up">Copyright 2020 kraftwerk</div>
+            <div class="footer-down"></div>
+        </footer>
+    </div>
+
+    <script src="dist/all.js?cb=1599775270142"></script>
+    <script>
+        $(".slider-container").ikSlider({
+          speed: 500
+        });
+        $(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); });
+        </script>
+  </body>
+</html>

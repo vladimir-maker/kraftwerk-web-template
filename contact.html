@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Kraftwerk</title>
+    <link rel="icon" href="./dist/img/radio-checked.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/style.css?cb=1599775270142" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Advent+Pro:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="kraftwerk-top">
+      <div class="header">
+        <div class="logo">
+          <a href="index.html">
+            <img src="dist/img/logo-white.png" alt="Logo kraftwerk" />
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="contact-content">
+      <div class="contact-header">
+        <h1>Enlightenment Is Not </br> Just One State</h1>
+      </div>
+      <div class="contact-items">
+        <form>
+        <div class="contact-item">
+          <div class="item-header">
+            <h2>Personal Data</h2></div>
+          <div class="item-body">
+            <label class="kraft-container">Mrs.
+              <input type="radio" checked="checked" name="gender">
+              <span class="checkmark"></span>
+            </label>
+            <label class="kraft-container">Mr.
+              <input type="radio" name="gender">
+              <span class="checkmark"></span>
+            </label><br><br>
+              <label for="name" class="lable-text">First Name:</label><br>
+              <input type="text" id="name" name="name" placeholder="First Name" /><br><br>
+              <label for="surname" class="lable-text">Surname:</label><br>
+              <input type="text" id="surname" name="surname" placeholder="Surname" /><br><br>
+              <label for="street" class="lable-text">Street:</label><br>
+              <input type="text" id="street" name="street" placeholder="Street" /><br><br>
+              <div class="inline-inputs margin">
+                <div class="inline-input">
+                  <label for="zip" class="lable-text">Zip:</label><br>
+                  <input type="text" id="zip" name="zip" placeholder="Zip"/>
+                </div>
+                <div class="inline-input">
+                  <label for="city" class="lable-text">City:</label><br>
+                  <input type="text" id="city" name="city" placeholder="City"/>
+                </div>
+              </div>
+              <label for="country" class="lable-text">Country:</label><br>
+              <select id="country" name="country" >
+                <option value="">- Choose Country -</option>
+                <option value="serbia">Serbia</option>
+                <option value="croatia">Croatia</option>
+                <option value="france">France</option>
+              </select>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="item-header"><h2>Contact Data</h2></div>
+          <div class="item-body">
+              <label for="email" class="lable-text">E-mail:</label><br>
+              <input type="text" id="email" name="email" placeholder="E-Mail" /><br><br>
+              <div class="inline-inputs">
+                <div class="inline-input">
+                  <label for="code" class="lable-text">Phone:</label><br>
+                  <input type="text" id="code" name="code" placeholder="Area Code"/>
+                </div>
+                <div class="inline-input">
+                  <label for="phone"></label><br>
+                  <input type="text" id="phone" name="phone" placeholder="Phone" />
+                </div>
+              </div>
+              <label class="container-check" for="subscribe">Subscribe to newsletter (unchecked) 
+                 <input type="checkbox" id="subscribe" name="subscribe" checked="checked"/>
+                 <span class="check"></span>
+                </label>
+              <label class="container-check"" for="agree">Agree to <span>terms and conditions</span> (checked)
+                <input type="checkbox" id="agree" name="agree"/>
+                <span class="check"></span>
+              </label>
+              <label for="message" class="lable-text" >Message:</label><br>
+              <textarea type="text" id="message" name="message" placeholder="Message" rows="3" ></textarea><br><br>
+              <button type="submit">Send</button>
+          </div>
+        </div>
+      </form>
+      </div>
+    </div>
+    <div id="kraftwerk-bottom">
+      <footer>
+        <div class="footer-up">Copyright 2020 kraftwerk</div>
+        <div class="footer-down"></div>
+      </footer>
+    </div>
+  </body>
+</html>

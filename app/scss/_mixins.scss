@@ -1,0 +1,103 @@
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin before($display: block, $pos: absolute, $content: "") {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+@mixin borderRadius($radius) {
+  border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+}
+@mixin gradient($start-color, $end-color, $orientation) {
+  background: $start-color;
+  @if $orientation == "vertical" {
+    background: -webkit-linear-gradient(top, $start-color, $end-color);
+    background: linear-gradient(to bottom, $start-color, $end-color);
+  } @else if $orientation == "horizontal" {
+    background: -webkit-linear-gradient(left, $start-color, $end-color);
+    background: linear-gradient(to right, $start-color, $end-color);
+  } @else {
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      $start-color,
+      $end-color
+    );
+    background: radial-gradient(ellipse at center, $start-color, $end-color);
+  }
+}
+@mixin grid($cols, $mgn) {
+  float: left;
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  width: ((100% - ($cols - 1) * $mgn) / $cols);
+  &:nth-child(#{$cols}n) {
+    margin-right: 0;
+  }
+}
+
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin response($breakpoint) {
+  @if ($breakpoint == large) {
+    @media (max-width: 1484px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == middle) {
+    @media (max-width: 760px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == mobile) {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@mixin animate($name, $duration, $iteration, $direction) {
+  -webkit-animation-duration: $duration;
+  -moz-animation-duration: $duration;
+  -o-animation-duration: $duration;
+  animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-iteration-count: $iteration;
+  -o-animation-iteration-count: $iteration;
+  animation-iteration-count: $iteration;
+  -webkit-animation-name: $name;
+  -moz-animation-name: $name;
+  -o-animation-name: $name;
+  animation-name: $name;
+  -webkit-animation-direction: $direction;
+  -moz-animation-direction: $direction;
+  -o-animation-direction: $direction;
+  animation-direction: $direction;
+}
+@mixin kraftwerkWelcome {
+  @include animate(kraftwerkWelcome, 1.7s, linear, easy-out);
+}

@@ -1,0 +1,217 @@
+@import "variables";
+@import "mixins";
+@import "slider";
+@import "contact";
+@import "placeholders";
+@import "customInputs";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border-width: 0px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+@include keyframes(kraftwerkWelcome) {
+  0% {
+    transform: translate(-300px);
+  }
+  50% {
+    transform: translate(70px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+#kraftwerk-top {
+  .header {
+    background-color: $orangeKraftwerk;
+    box-shadow: 1px 1px 9px 2px #606060;
+    position: absolute;
+    width: 100%;
+    height: 39px;
+    z-index: 2;
+    @include response(mobile) {
+      text-align: center;
+    }
+  }
+  .logo {
+    width: auto;
+    margin-left: 34px;
+    margin-top: 10px;
+    @include kraftwerkWelcome;
+    @include response(mobile) {
+      margin-left: 0;
+    }
+    img {
+      height: 19px;
+    }
+  }
+  .main-image {
+    height: auto;
+    position: relative;
+    &:before {
+      @include before;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+      opacity: 0.3;
+      z-index: 1;
+    }
+  }
+  .main-image img {
+    width: 100%;
+    margin-top: 39px;
+  }
+
+  .main-text {
+    @include center;
+    z-index: 1;
+  }
+  .main-button {
+    position: absolute;
+    top: 64%;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+  }
+  h1 {
+    font-size: $desktopHeading;
+    color: #fff;
+    text-align: center;
+    @include response(large) {
+      font-size: $largeHeading;
+    }
+    @include response(middle) {
+      font-size: $middleHeading;
+    }
+    @include response(mobile) {
+      font-size: $mobileHeading;
+    }
+  }
+  button {
+    @include borderRadius(4px);
+    padding: 17px 85px;
+    @include gradient($orangeGradientBegin, $orangeGradientEnd, horizontal);
+    color: #fff;
+    cursor: pointer;
+    @include response(large) {
+      padding: 13px 70px;
+    }
+    @include response(mobile) {
+      padding: 8px 40px;
+    }
+  }
+}
+#kraftwerk-middle {
+  width: 90%;
+  margin: 40px auto;
+  @include clearFix;
+  .kraftwerk-card {
+    height: 714px;
+    @include grid(2, 2%);
+    background-color: $backgroundCard;
+    @include response(middle) {
+      height: 650px;
+      @include grid(1, 1%);
+      margin-bottom: 5%;
+    }
+    @include response(mobile) {
+      height: auto;
+
+      @include grid(1, 1%);
+      .card-header h2 {
+        font-size: 22px;
+      }
+      margin-bottom: 5%;
+    }
+  }
+  .card-image {
+    width: auto;
+    text-align: center;
+    img {
+      width: 94%;
+    }
+  }
+}
+.card-header {
+  h2 {
+    padding: 24px 20px;
+    font-size: 30px;
+  }
+}
+.card-text {
+  margin: 0 auto;
+  width: 94%;
+  padding: 27px 0 42px;
+  span {
+    color: $orangeKraftwerk;
+    font-weight: bold;
+  }
+  ul {
+    list-style: none;
+  }
+  ul li:before {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-top: solid transparent;
+    border-bottom: solid transparent;
+    border-left: solid $orangeKraftwerk;
+    border-width: 7px;
+    content: " ";
+    margin-right: 8px;
+  }
+}
+.big-card {
+  background-color: $backgroundCard;
+  width: 100%;
+  margin-bottom: 50px;
+  @include clearFix;
+  @include response(mobile) {
+    padding: 12px 0 20px;
+    .text-small {
+      padding-left: 19px;
+    }
+  }
+}
+.big-card-item {
+  @include grid(2, 2%);
+  padding: 34px 0;
+  text-align: right;
+  img,
+  p {
+    width: 92%;
+    text-align: left;
+    span {
+      color: $orangeKraftwerk;
+      font-weight: bold;
+    }
+  }
+  @include response(mobile) {
+    @include grid(1, 1%);
+    text-align: center;
+    padding: 11px 0 0;
+    img {
+      width: 90%;
+    }
+    p {
+      width: 95%;
+    }
+  }
+}
+#kraftwerk-bottom {
+  .footer-up {
+    background-color: $orangeGradientBegin;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    padding: 20px 0;
+  }
+  .footer-down {
+    background-color: $orangeGradientEnd;
+    padding: 60px 0;
+  }
+}
