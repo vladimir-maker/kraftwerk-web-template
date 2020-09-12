@@ -187,6 +187,28 @@
             show(current - 1);
           }
         });
+        $arrows.on("keydown." + PLUGIN, function (e) {
+          e.preventDefault();
+          if (e.keyCode == 13) {
+            if (this.getAttribute("data-ikslider-dir") === "next") {
+              show(current + 1);
+            } else {
+              show(current - 1);
+            }
+          } else if (e.shiftKey && e.keyCode == 9) {
+            if (this.classList.contains("slider__switch--prev")) {
+              document.querySelector(".tab-logo").focus();
+            } else if (this.classList.contains("slider__switch--next")) {
+              document.querySelector(".slider__switch--prev").focus();
+            }
+          } else if (e.keyCode == 9) {
+            if (this.classList.contains("slider__switch--prev")) {
+              document.querySelector(".slider__switch--next").focus();
+            } else if (this.classList.contains("slider__switch--next")) {
+              document.querySelector(".tabable").focus();
+            }
+          }
+        });
       } else {
         $arrows.attr("disabled", true);
       }
