@@ -12,13 +12,18 @@
   input {
     position: absolute;
     opacity: 0;
-    cursor: pointer;
+
     &:checked {
       & ~ .checkmark {
         background-color: $orangeKraftwerk;
         &:after {
           display: block;
         }
+      }
+    }
+    &:focus {
+      & ~ .checkmark {
+        outline: 1px solid #9b9999;
       }
     }
   }
@@ -68,9 +73,15 @@
       & ~ .check {
         background-color: $orangeKraftwerk;
         border: none;
+
         &:after {
           display: block;
         }
+      }
+    }
+    &:focus {
+      & ~ .check {
+        outline: 1px solid #9b9999;
       }
     }
   }
@@ -96,6 +107,7 @@
   color: #acacac;
   font-size: 16px;
 }
+
 .check {
   position: absolute;
   top: -6px;

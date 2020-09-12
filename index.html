@@ -4,7 +4,7 @@
     <link rel="icon" href="./dist/img/radio-checked.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="dist/style.css?cb=1599830304416" />
+    <link rel="stylesheet" href="dist/style.css?cb=1599908073152" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -39,7 +39,7 @@
               <div class="slider__switch slider__switch--prev" data-ikslider-dir="prev">
                 <span></span>
               </div>
-              <div class="slider__switch slider__switch--next" data-ikslider-dir="next">
+              <div class="slider__switch slider__switch--next" data-ikslider-dir="next"  >
                 <span></span>
               </div>
           </div>
@@ -133,12 +133,15 @@
         </footer>
     </div>
 
-    <script src="dist/all.js?cb=1599830304416"></script>
+    <script src="dist/all.js?cb=1599908073152"></script>
     <script>
         $(".slider-container").ikSlider({
           speed: 500
         });
-        $(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); });
+        $(".slider-container").on('changeSlide.ikSlider', function (evt) { console.log(evt.currentSlide); })
+       
+
+        
         </script>
   </body>
 </html>
